@@ -1,8 +1,0 @@
-﻿<!ELEMENT uczelnia (wydzial+)>
-<!ELEMENT wydzial (nazwa, kierunek+)>
-<!ELEMENT nazwa (#PCDATA)>
-<!ELEMENT kierunek (nazwa, (student | student, student | student, student, student))>
-<!ELEMENT student ((imie | imie, imie), nazwisko, nrindeksu)>
-<!ELEMENT imie (#PCDATA)>
-<!ELEMENT nazwisko (#PCDATA)>
-<!ELEMENT nrindeksu (#PCDATA)>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="uczelnia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="wydzial" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wydzial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nazwa" type="xs:string"/>
+        <xs:element ref="kierunek" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="kierunek">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nazwa" type="xs:string"/>
+        <xs:element ref="student" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="student">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="imie" type="xs:string"/>
+        <xs:element name="nazwisko" type="xs:string"/>
+	<xs:element name="nrindeksu">
+	<xs:simpleType>
+	<xs:restriction base="xsd:integer">
+	<xs:minInclusive value="100"/>
+	<xs:maxInclusive value="400"/>
+	</xs:restriction>
+	</xs:simpleType>
+	</xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

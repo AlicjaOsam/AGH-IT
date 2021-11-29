@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="lab6_xsl.xsl"?>
+<uczelnia>
+    <wydzial>
+        <nazwa>FiIS</nazwa>
+        <kierunek>
+            <nazwak>Informatyka</nazwak>
+            <student>
+                <nazwisko>Abacki</nazwisko>
+                <imie>Adam</imie>
+                <nrindeksu>103</nrindeksu>
+            </student>
+            <student>
+                <nazwisko>Babacka</nazwisko>
+                <imie>Barbara </imie><imie>Bogumila</imie>
+                <nrindeksu>362</nrindeksu>
+            </student>
+            <student>
+                  <nazwisko>Cabacki</nazwisko>
+                 <imie>Cezary</imie>
+                <nrindeksu>249</nrindeksu>
+            </student>
+        </kierunek>
+        <kierunek>
+            <nazwak>Fizyka</nazwak>
+            <student>
+                <nazwisko>Dadacki</nazwisko>
+                <imie>Dariusz</imie>
+                <nrindeksu>180</nrindeksu>
+            </student>
+        </kierunek>
+    </wydzial>
+    <wydzial>
+        <nazwa>WIMiR</nazwa>
+        <kierunek>
+            <nazwak>Izynieria Akustyczna</nazwak>
+            <student>
+                <nazwisko>Ebacka</nazwisko>
+                <imie>Ewa</imie>
+                <nrindeksu>259</nrindeksu>
+            </student>
+            <student>
+                <nazwisko>Fabacki</nazwisko>
+                <imie>Franciszek</imie><imie>Filip</imie>
+                <nrindeksu>368</nrindeksu>
+            </student>
+        </kierunek>
+    </wydzial>
+</uczelnia>

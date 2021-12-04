@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    function validate(){
+        if ((document.form1.pole1.value.length < 4)||(document.form1.pole2.value.length < 4)||(document.form1.pole3.value=="")||(document.form1.pole4.options.selectedIndex==0)){
+            alert ("Nalezy wypelnic wszystkie pola wymagane!");
+            return false; 
+        }
+        else{
+            var text = "nazwisko: " + document.form1.pole1.value + "\n";
+            text += "imie: " + document.form1.pole2.value + "\n";
+            text += "e-mail: " + document.form1.pole3.value + "\n";
+            text += "rok studiow: " + document.form1.pole4.value + "\n";
+            alert(text);
+            return true;
+        }
+    }
+</script>
+        
+    <form name="form1" onsubmit="return validate()">
+    <p>nazwisko: (*pole wymagane)</p>
+    <input type="text" size="20" name="pole1" /><br/>
+    <p>imie: (*pole wymagane)</p>
+    <input type="text" size="20" name="pole2" /><br/>
+    <p>e-mail: (*pole wymagane)</p>
+    <input type="text" size="20" name="pole3" /><br/>
+    <p>rok studiow: (*pole wymagane)
+    <select name="pole4" size="1">
+    <option value="0">wybierz rok</option>
+    <option value="1">rok 1</option>
+    <option value="2">rok 2</option>
+    <option value="3">rok 3</option>
+    </select>
+    </p>
+    <p>uwagi:</p>
+    <textarea name="pole5" rows="3" cols="25"></textarea><br/>
+    <input type="submit" name="B1" value="Submit" />
+    </form>

@@ -1,0 +1,57 @@
+<script type="text/javascript">
+    function validate(){
+        var i = 0;
+        if(document.form1.pole1.value.length < 4){
+            var text = "<p>Brak podanego nazwiska<p>"
+            document.getElementById("i1").innerHTML = text; 
+            i += 1;
+        }
+        if(document.form1.pole2.value.length < 4){
+            var text = "Brak podanego imienia"
+            document.getElementById("i2").innerHTML = text;
+            i += 1;
+        }
+        if(document.form1.pole3.value==""){
+            var text = "Brak podanego e-maila"
+            document.getElementById("i3").innerHTML = text;
+            i += 1;
+        }
+        if(document.form1.pole4.options.selectedIndex==0){
+            var text = "Brak podanego roku"
+            document.getElementById("i4").innerHTML = text;
+            i += 1;
+        }
+        if(i > 0){
+            return false;
+        }
+        else{
+            var text = "nazwisko: " + document.form1.pole1.value + "\n";
+            text += "imie: " + document.form1.pole2.value + "\n";
+            text += "e-mail: " + document.form1.pole3.value + "\n";
+            text += "rok studiow: " + document.form1.pole4.value + "\n";
+            alert(text);
+            return true;
+        }
+    }
+</script>
+        
+    <form name="form1" onsubmit="return validate()">
+    <p>nazwisko: (*pole wymagane)</p>
+    <input type="text" size="20" name="pole1" /><div id="i1"></div><br/>
+    <p>imie: (*pole wymagane)</p>
+    <input type="text" size="20" name="pole2" /><div id="i2"></div><br/>
+    <p>e-mail: (*pole wymagane)</p>
+    <input type="text" size="20" name="pole3" /><div id="i3"></div><br/>
+    <p>rok studiow: (*pole wymagane)
+    <select name="pole4" size="1">
+    <option value="0">wybierz rok</option>
+    <option value="1">rok 1</option>
+    <option value="2">rok 2</option>
+    <option value="3">rok 3</option>
+    </select>
+    </p>
+    <div id="i4"></div>
+    <p>uwagi:</p>
+    <textarea name="pole5" rows="3" cols="25"></textarea><br/>
+    <input type="submit" name="B1" value="Submit" />
+    </form>

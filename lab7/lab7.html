@@ -1,0 +1,17 @@
+<html> <head> <title>Ksiazki</title>
+    <link rel="StyleSheet" href="lab7_css.css" type="text/css">
+    <script src="lab7_js.js" type="text/javascript"></script>
+    </head>
+    <body> 
+    <fieldset> <legend>Książki</legend> 
+        <fieldset class="f">
+            <form action="#">
+                <input type="button" value="Dodaj rekord" onclick="sendRequest()">
+            </form>
+            <form action="cgi-bin/lab7_b.py" method="post"> 
+                <input type="submit" value="Lista rekordow">
+            </form>
+        </fieldset>
+    </fieldset> 
+    </body> 
+</html> 

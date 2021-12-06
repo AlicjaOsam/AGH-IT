@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:template match="/">
         <html>
-            <link rel="stylesheet" type="text/css" href="lab4_css.css"/> 
+            <link rel="stylesheet" type="text/css" href="lab6_css.css"/> 
             <head>
                 <title>Uczelnia</title>
             </head>

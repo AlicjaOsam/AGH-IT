@@ -19,7 +19,8 @@ function sendRequest(){
 }
  
 function handleResponse(){
+    myDiv = document.getElementById("MyDivElement")
     if (request.readyState == 4)    {
-        alert(request.responseText) ;
+        myDiv.innerHTML += request.responseText;
     }
 }

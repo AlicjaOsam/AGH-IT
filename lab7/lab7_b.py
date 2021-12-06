@@ -2,7 +2,7 @@
 import cgi, os, time, cgitb
 form = cgi.FieldStorage()
 
-filepath = "lab5_txt.txt"
+filepath = "lab7_txt.txt"
 f = open(filepath, "r")
 print ("Content-type: text/html")
 print ()
@@ -12,7 +12,7 @@ print ("<title>REKORDY DOSTEPNE W BAZIE DANYCH</title>")
 print ("</head><body>")
 print("<table>")
 print("<thead>")
-print("<tr> <th> tytul <th> autor <th> date <th> IP")
+print("<tr> <th> tytul <th> autor")
 print("<tbody>")
 for line in f:
     print("<tr>")

@@ -1,5 +1,5 @@
 var xmlHttp;
- 
+
 function getRequestObject()      {
        if ( window.ActiveXObject)  {
             return ( new ActiveXObject("Microsoft.XMLHTTP")) ;
@@ -41,19 +41,4 @@ function sendRequest()      {
     } else {
       alert ("Blad") ;
     }
-}
-function handleResponse()      {
-    myDiv = document.getElementById("MyDivElement");
-    if (xmlHttp.readyState == 4) {
-         if ( xmlHttp.status == 200 )  {
-             response = xmlHttp.responseXML;
-             var xmlRoot = response.documentElement ; 
-             var optionArray = xmlRoot.getElementsByTagName('option') ;
-             var html = "<select>" ;
-             for ( var i=0; i<optionArray.length; i++) 
-                 html += "<option>" +  optionArray.item(i).data + "</option>";
-                 html += "</select>";
-             myDiv.innerHTML += html ;
-         }
-    }  
 }

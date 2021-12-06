@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    function draw() {
+      if((document.form1.srx.value+document.form1.pr.value)<800 && (document.form1.srx.value-document.form1.pr.value)>0 && (document.form1.sry.value+document.form1.pr.value)<400 && (document.form1.sry.value-document.form1.pr.value)>0){
+        var canvas = document.getElementById('can');
+        var context = canvas.getContext("2d");
+        context.strokeStyle = "#ddd";
+        context.beginPath();
+        context.arc(document.form1.srx.value,document.form1.sry.value,document.form1.pr.value,0,2*Math.PI);
+        context.strokeStyle = "red";
+        context.stroke();
+      }
+      else{
+        var canvas = document.getElementById('can');
+        var context = canvas.getContext("2d");
+        context.strokeStyle = "#ddd";
+        context.beginPath();
+        var temp = 20;
+        context.arc(document.form1.srx.value,document.form1.sry.value,temp,0,2*Math.PI);
+        context.strokeStyle = "red";
+        context.stroke();
+      }
+    }
+  </script>
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Laboratorium 7 - cwiczenie 1</title>
+    </head>
+    <body>
+        <form name="form1">
+            <p>Podaj wspolrzedne srodka<input type="text" name="srx"><input type="text" name="sry"></p>
+            <p>Podaj promien<input type="text" name="pr"></p>
+            <input type="button" value="wykonaj" onclick="draw()">   
+        </form>
+        <canvas id="can" width="800" height="400"></canvas>
+    </body>
+</html>
